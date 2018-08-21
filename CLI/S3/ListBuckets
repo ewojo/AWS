@@ -1,0 +1,2 @@
+#list bucket with s3api
+aws s3api list-buckets --query "Buckets[].Name" > list_s3.txt
