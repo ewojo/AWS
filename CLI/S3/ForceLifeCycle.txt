@@ -1,0 +1,4 @@
+#Dont want to wait for Lifecycle policies? 
+#Run Command to Remove Files Based on date.
+
+aws s3api list-objects-v2 --bucket <BucketName> --output json --query 'Contents[?LastModified<=`2018-09-01`].[Key]' --region <region> | jq -r '.[] | "--key " + .[0]' | xargs -L1 aws s3api delete-object --bucket <bucketname> --region <region>
