@@ -1,0 +1,1 @@
+aws s3api list-object-versions --bucket <bucket namne> --prefix <Prefix> --query 'DeleteMarkers[].[Key, VersionId]' | jq -r '.[] | "--key '\''" + .[0] + "'\'' --version-id " + .[1]' |  xargs -L1 aws s3api delete-object --bucket <bucketname>
