@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+#In order to use, use the following command
+#python3 ChangeSMTPPassword.py --region SES_REGION --secret AWS_SECRET_KEY
+
 
 import hmac
 import hashlib
