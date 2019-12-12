@@ -38,7 +38,7 @@ def main():
     parser.add_argument('--region',
             help='us-east-1',
             required=True,
-            choices=['us-east-1','us-west-2','eu-west-1'],
+            choices=['us-east-1','us-west-2','eu-west-1','eu-central-1','ap-south-1','ap-southeast-2'],
             action="store")
     args = parser.parse_args()
 
